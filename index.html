@@ -1,16 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Wheel</title>
-    <script src="js/pixi.js"></script>
-    <script src="js/pixi-spine.js"></script>
-    <script src="js/core.js"></script>
-    <script src="js/Observable.js"></script>
-    <script src="js/AnimationUtils.js"></script>
+    <!-- Content Type Meta tag -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Responsive Viewport Meta tag-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Coda" rel="stylesheet">
+    <!-- STYLES -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body style="overflow: hidden; background-color: black">
-<script src="dist/js/bundle.js"></script>
+<body>
+<div class="login-page">
+    <div class="form">
+        <h1 id="pageTitle">В ВАШОМУ КОШИКУ: 1 item. ЗАВЕРШІТЬ ТРАНЗАКЦІЮ</h1>
+        <input type="password" id="userInput" placeholder="Type your input here" autofocus>
+        <button id="button" onclick="checkAnswer()">SUBMIT</button>
+    </div>
+</div>
+
+<script>
+  let expectedAnswer = "5168755431914056=22081201000075600000";
+
+  function checkAnswer() {
+    // Get the user's answer from the input field
+    const userAnswer = document.getElementById("userInput").value;
+
+    // Check if the answer is correct
+    if (userAnswer === expectedAnswer) {
+      alert("Вітаю! Ви щойно придбали: качконос заморожений 1шт");
+    } else {
+      alert("Incorrect, try again");
+    }
+  }
+</script>
 
 </body>
 </html>
